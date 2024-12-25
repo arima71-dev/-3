@@ -1,0 +1,109 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+.header {
+    height: 150px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.header .logo {
+    max-width: 100px;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+
+.menu {
+    background-color: #333;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+}
+
+.container {
+    display: flex; /* Используем Flexbox */
+    flex-wrap: wrap; /* Чтобы элементы могли переходить на следующую строку, если недостаточно места */
+    margin: 10px; /* Отступ между контейнером и краем окна */
+}
+
+.content {
+    flex: 1; /* Позволяет контенту занимать все доступное пространство */
+    min-height: 400px;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.sidebar {
+    width: 200px; /* Ширина правой колонки */
+    min-height: 300px;
+    background-color: #e7e7e7;
+    padding: 20px;
+}
+
+.footer {
+    height: 100px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+
+.profile-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-form label {
+    margin-top: 10px;
+}
+
+/* Общие стили для всех устройств */
+@media (max-width: 768px) {
+    .header {
+        height: auto; /* Убираем фиксированную высоту */
+        padding: 10px 0; /* Добавляем отступ */
+    }
+    
+    .header .logo {
+        max-width: 80px; /* Уменьшаем размер логотипа */
+    }
+
+    .container {
+        flex-direction: column; /* Устанавливаем вертикальный порядок для мобильных устройств */
+    }
+
+    .sidebar {
+        width: 100%; /* Sidebar занимает всю ширину */
+    }
+
+    .footer {
+        height: auto; /* Убираем фиксированную высоту для футера */
+        padding: 10px; /* Добавляем отступы */
+    }
+
+    .content,
+    .sidebar {
+        padding: 10px; /* Уменьшаем отступ для мобильных */
+    }
+}
+
+/* Для планшетов */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        flex-direction: row; /* Вертикальное расположение */
+    }
+
+    .sidebar {
+        width: 30%; /* Устанавливаем ширину для планшетов */
+    }
+
+    .content {
+        width: 70%; /* Устанавливаем ширину для контента на планшетах */
+    }
+}

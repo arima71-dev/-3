@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Первый резиновый веб-сайт с типовым шаблоном 2-колоночного макета.">
+    <title>Резиновый сайт</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <img src="logo.png" alt="Логотип" class="logo">
+        <h1 class="site-title">Мой Сайт</h1>
+    </header>
+    <nav class="menu">Меню</nav>
+    <div class="container">
+        <main class="content">
+            <h2>Редактирование профиля</h2>
+            <form class="profile-form">
+                <label for="username">Имя пользователя:</label>
+                <input type="text" id="username" name="username" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <input type="submit" value="Сохранить">
+            </form>
+        </main>
+        <aside class="sidebar">Доп. информация</aside>
+    </div>
+    <footer class="footer">Подвал сайта</footer>
+</body>
+</html>
